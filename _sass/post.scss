@@ -1,0 +1,26 @@
+#post-container {
+    display: flex;
+}
+
+.post-title {
+    flex-grow: 1;
+}
+
+.post-date {
+    padding-top: 0.75rem;
+    float: right;
+}
+
+.home-post-date {
+    padding-top: 0.2rem;
+    float: inline-end;
+    flex-shrink: 0;
+}
+
+#custom-sub-hr {
+    border-color: cyan;
+}
+
+#custom-desc {
+    color: cyan;
+}

@@ -1,0 +1,18 @@
+title: exploiitm
+author:
+  name: Cybersecurity Club, IIT Madras
+
+description: "exploiitm: IIT Madras' Cybsersecurity blog and CTF team"
+
+baseurl: /
+source: .
+destination: ./_site
+permalink: /:title
+
+future: true
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-category-pages
+
+theme: jekyll-theme-hacker
