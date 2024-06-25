@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Welcome Home</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      html {
+        font-size: 100%;
+        --bg-color: #181a1b;
+        --body-color: #dddddd;
+        --heading-font: "Fira Code Regular", monospace;
+        --heading-color: #dddddd;
+        --link-font: "Trebuchet MS", sans-serif;
+        --link-color-normal: #dfa497;
+        --link-border-color-normal: #181a1b;
+        --link-color-hover: #e8e6e3;
+        --link-border-color-hover: #5f2a1e;
+        height: 100%;
+        display: table;
+        margin: auto;
+      }
+
+      /* animation */
+      @keyframes skew {
+        0% {
+          transform: skew(0deg) rotate3D(0, 0, 1, 0deg);
+        }
+        25% {
+          transform: skew(6deg) rotate3D(0, 0.1, 1, 90deg);
+        }
+        50% {
+          transform: skew(3deg) rotate3D(0, 0, 1, 190deg);
+        }
+        75% {
+          transform: skew(5deg) rotate3D(0, 0.2, 1, 270deg);
+        }
+        100% {
+          transform: skew(1deg) rotate3D(0, 0, 1, 360deg);
+        }
+      }
+
+      @keyframes fluid-border {
+        0% {
+          border-radius: 165px 200px 180px 160px;
+        }
+        25% {
+          border-radius: 200px 150px 190px 200px;
+        }
+        50% {
+          border-radius: 190px 200px 100px 186px;
+        }
+        75% {
+          border-radius: 200px 175px 151px 180px;
+        }
+        100% {
+          border-radius: 165px 200px 180px 160px;
+        }
+      }
+
+
+      /*16px*/
+
+      .link {
+        /* text-transform : lowercase; */
+        text-decoration: none;
+        background-color: #181a1b;
+        color: var(--link-color-normal);
+        font-family: profont;
+        font-size: 1.3em;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin: 3px 6px 3px 6px;
+        padding: 0.5em;
+        transition:
+          color 0.15s,
+          left 0.15s,
+          border 0.15s;
+        position: relative;
+        left: 0;
+        border: 0.5px solid var(--link-border-color-normal);
+        border-radius: 3px;
+      }
+
+      .link:hover {
+        background-color: #5f2a1e;
+        color: var(--link-color-hover);
+        border: 0.5px solid var(--link-border-color-hover);
+      }
+
+      body {
+        background-color: var(--bg-color);
+        line-height: 1.65;
+        color: var(--body-color);
+        margin: 0;
+        height: 100%;
+        width: 100vw;
+        align-self: auto;
+        overflow: auto;
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      p {
+        margin-bottom: 1.15rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        margin: 2.75rem 0 1.05rem;
+        /* font-family: "Dank Mono", monospace; */
+        font-family: var(--heading-font);
+
+        font-weight: 500;
+        line-height: 1.15;
+      }
+
+      h1 {
+        margin-top: 0.5em;
+        font-size: 3.052em;
+      }
+
+      h2 {
+        font-size: 2.441em;
+      }
+
+      h3 {
+        font-size: 1.953em;
+      }
+
+      h4 {
+        font-size: 1.563em;
+      }
+
+      h5 {
+        font-size: 1.25em;
+      }
+
+      @font-face {
+        font-family: profont;
+        font-style: normal;
+        font-weight: normal;
+        src: url("ProFontWindows.ttf") format("truetype");
+      }
+
+      #circle {
+        width: min(40vw, 300px);
+        height: min(40vw, 300px);
+        border-radius: 50%;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        background: #181a1b;
+        align: center;
+        vertical-align: middle;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .img-wrapper {
+        border-radius: inherit;
+        background: black;
+        width: inherit;
+        height: inherit;
+        animation: fluid-border 4s ease-in-out infinite, skew 6s linear infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+      }
+
+      #circle img {
+        width: inherit;
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+      }
+
+      #years {
+        font-family: "profont", monospace;
+        font-size: 2em;
+        color: #d4cdaf;
+        background-color: #111111;
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        border-radius: 15px;
+        border-color: #7fbab1;
+        margin-top: 15px;
+        padding: 15px;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .main {
+        width: 90vw;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        vertical-align: middle;
+        align-items: center;
+        overflow: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <div id="circle">
+        <div class="img-wrapper"></div>
+        <img src="logo_backless_green.png" alt="Cybersecurity Club" />
+      </div>
+      <a href="https://exploiitm.github.io/blog"
+        ><div class="link">/blog</div></a
+      >
+
+      <a href="https://exploiitm.github.io/blog/about">
+        <div class="link">/about</div>
+      </a>
+      <div id="years"></div>
+    </div>
+    <script>
+      var begin = new Date("2023/09/15 08:00 PM").valueOf();
+      var sec = document.querySelector("#years");
+      function updateClock() {
+        var now = Date.now();
+        var diff = (now - begin) / 1000 / 60 / 60 / 24 / 365;
+        sec.innerHTML = diff.toFixed(11) + " years since inception!";
+        setTimeout(updateClock, 1);
+      }
+      updateClock();
+    </script>
+  </body>
+</html>

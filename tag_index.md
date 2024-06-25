@@ -1,3 +1,0 @@
----
-layout: tag_index
----
